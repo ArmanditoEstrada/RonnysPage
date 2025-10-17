@@ -56,8 +56,8 @@ The menu features a wide variety of desserts and snacks:
 
 ## 🚀 Technologies
 
-- **React 18** - Modern JavaScript library for building user interfaces
-- **Next.js 14** (App Router) - React framework with server-side rendering
+- **React 19** - Modern JavaScript library for building user interfaces
+- **Next.js 15.2.4** (App Router) - React framework with server-side rendering
 - **TypeScript** - Type-safe development
 - **Tailwind CSS v4** - Utility-first CSS framework
 - **shadcn/ui components** - Beautiful, accessible UI components
@@ -67,7 +67,7 @@ The menu features a wide variety of desserts and snacks:
 
 ```bash
 # Install dependencies
-npm install --legacy-peer-deps
+npm install
 
 # Run in development mode
 npm run dev
@@ -103,7 +103,7 @@ Add the environment variable:
 
 ### 4. Configure Destination Email
 
-Edit the `app/actions.ts` file and change:
+Edit the `app/actions.tsx` file and change:
 
 ```typescript
 to: ["your-email@example.com"], // Change this to your real email
@@ -116,7 +116,7 @@ To use a custom domain in production:
 1. In Resend, go to "Domains"
 2. Add your domain
 3. Configure DNS records according to the instructions
-4. Update the `from` field in `app/actions.ts`:
+4. Update the `from` field in `app/actions.tsx`:
 
 ```typescript
 from: "Ronny's Food Truck <contact@yourdomain.com>",
