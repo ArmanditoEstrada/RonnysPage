@@ -57,8 +57,8 @@ export default function RonnyLandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-950 via-red-900 to-red-800">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-red-950/98 backdrop-blur-sm border-b-2 border-yellow-400">
+    <div className="min-h-screen bg-red-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-red-950 backdrop-blur-sm border-b-2 border-yellow-400">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
@@ -218,7 +218,7 @@ export default function RonnyLandingPage() {
 
       <section
         id="inicio"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-red-950/50 via-red-900/30 to-red-950/50 pt-24 pb-12"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-red-800 pt-24 pb-12"
       >
         <PawPrint className="absolute top-32 left-10 animate-bounce" style={{ animationDuration: "3s" }} />
         <PawPrint
@@ -283,7 +283,7 @@ export default function RonnyLandingPage() {
         </div>
       </section>
 
-      <section id="historia" className="py-20 bg-gradient-to-b from-red-950/50 via-red-900/40 to-red-950/50 relative">
+      <section id="historia" className="py-20 bg-red-800 relative">
         <PawPrint className="absolute top-10 left-10 animate-bounce" style={{ animationDuration: "3s" }} />
         <PawPrint
           className="absolute top-10 right-10 animate-bounce"
@@ -300,27 +300,59 @@ export default function RonnyLandingPage() {
                 paintOrder: "stroke fill",
               }}
             >
-              TODO EMPEZÓ
+              🍽️ TODO EMPEZÓ 🍽️
             </h2>
             <div className="space-y-6">
               <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
                 <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
-                  Todo empezó por mi fanatismo al cocinar y juegos de comidita. Lo que comenzó como diversión se
-                  convirtió en pasión, y esa pasión se transformó en Ronny's, nuestro food truck sobre ruedas.
+                  👧 Desde pequeña, siempre me fascinó el mundo de la cocina. Pasaba horas jugando con mis juegos de
+                  comidita, imaginando sabores, colores y combinaciones que algún día podría crear de verdad. Lo que
+                  empezó como un simple pasatiempo infantil se transformó con el tiempo en una auténtica pasión por
+                  cocinar y compartir momentos a través de la comida.
                 </p>
               </Card>
+
               <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
                 <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
-                  El nombre viene de Ronny, nuestro pequeño chihuahua — la mascota de la familia y ahora la cara de este
-                  dulce sueño sobre ruedas.
+                  🚚 Esa pasión fue el punto de partida de Ronny's, nuestro food truck sobre ruedas, un sueño hecho
+                  realidad gracias al apoyo incondicional de mis padres, Christopher Jiménez y Marlene Espinosa. Ellos
+                  creyeron en mí desde el primer momento, y juntos tomamos la valiente decisión de dejarlo todo para
+                  construir este proyecto familiar.
                 </p>
               </Card>
+
+              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
+                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
+                  ❤️ Hoy, Ronny's no solo representa mi amor por la cocina, sino también el esfuerzo, la unión y la
+                  dedicación de nuestra familia. Cada platillo que servimos lleva un pedacito de esa historia: la de una
+                  niña que soñaba con cocinar y una familia que apostó por convertir ese sueño en sabor sobre ruedas.
+                </p>
+              </Card>
+
+              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
+                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
+                  🐕 El nombre viene de Ronny, nuestro pequeño chihuahua — la mascota de la familia y ahora la cara de
+                  este dulce sueño sobre ruedas.
+                </p>
+              </Card>
+
+              <div className="flex justify-center my-8">
+                <div className="w-full md:w-96 h-96 rounded-3xl overflow-hidden border-4 border-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.3)]">
+                  <Image
+                    src="/chihuahua-ronny.png"
+                    alt="Ronny el chihuahua"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="menu" className="py-20 bg-gradient-to-b from-red-950/50 via-red-900/40 to-red-950/50 relative">
+      <section id="menu" className="py-20 bg-red-800 relative">
         <PawPrint
           className="absolute top-10 left-10 animate-bounce"
           style={{ animationDuration: "3s", animationDelay: "0.2s" }}
@@ -331,7 +363,6 @@ export default function RonnyLandingPage() {
         />
 
         <div className="container mx-auto px-4">
-          {/* Retro menu header with checkered border and RONNY'S logo */}
           <div className="max-w-7xl mx-auto mb-12">
             <div className="bg-[#f5f0e8] rounded-3xl overflow-hidden border-4 border-black shadow-2xl">
               {/* Checkered border top */}
@@ -341,25 +372,14 @@ export default function RonnyLandingPage() {
                 ))}
               </div>
 
-              {/* Menu header with logo */}
-              <div className="px-8 py-6 flex items-center justify-between flex-wrap gap-4">
+              {/* Menu header - only showing Menú label */}
+              <div className="px-8 py-6 flex items-center justify-center">
                 <h2
                   className="text-5xl md:text-6xl font-black text-black"
                   style={{ fontFamily: "Brush Script MT, cursive" }}
                 >
                   Menú
                 </h2>
-                <div className="flex items-center gap-2">
-                  <span className="text-black text-2xl">★</span>
-                  <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
-                  >
-                    RONNY'S
-                  </h3>
-                  <span className="text-red-600 text-2xl">★</span>
-                  <span className="text-black text-2xl">★</span>
-                </div>
               </div>
 
               {/* Checkered border bottom */}
@@ -385,19 +405,30 @@ export default function RonnyLandingPage() {
           </div>
 
           <div className="max-w-7xl mx-auto space-y-8">
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              {/* Checkered pattern background */}
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
-                  <img
-                    src="/crepe-with-nutella-and-strawberries.jpg"
-                    alt="Crepas"
-                    className="w-full h-full object-cover rounded-lg shadow-md"
-                  />
+                  <img src="/crepas.png" alt="Crepas" className="w-full h-full object-cover rounded-lg shadow-md" />
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Crepas
                   </h3>
@@ -415,8 +446,17 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
                   <img
                     src="/belgian-waffle-with-berries-and-syrup.jpg"
@@ -426,8 +466,13 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Waffles
                   </h3>
@@ -443,8 +488,17 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
                   <img
                     src="/stack-of-pancakes-with-butter-and-syrup.jpg"
@@ -454,8 +508,13 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Hotcakes
                   </h3>
@@ -470,8 +529,17 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
                   <img
                     src="/loaded-fries.png"
@@ -481,8 +549,13 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Snacks
                   </h3>
@@ -498,19 +571,33 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
                   <img
-                    src="/coffee-cup-and-milkshake.jpg"
+                    src="/malteada.png"
                     alt="Bebidas"
-                    className="w-full h-full object-cover rounded-lg shadow-md"
+                    className="w-full h-full object-cover rounded-lg shadow-md object-top"
                   />
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Bebidas
                   </h3>
@@ -523,8 +610,17 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
                   <img
                     src="/strawberries-with-cream-dessert.jpg"
@@ -534,8 +630,13 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Con crema
                   </h3>
@@ -548,8 +649,17 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: `linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626),
+                                  linear-gradient(45deg, #dc2626 25%, transparent 25%, transparent 75%, #dc2626 75%, #dc2626)`,
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 10px 10px",
+                }}
+              />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-48 h-48 flex-shrink-0">
                   <img
                     src="/flan-napolitano-dessert.jpg"
@@ -559,8 +669,13 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
-                    style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontStyle: "italic" }}
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      WebkitTextStroke: "2px #000000",
+                      paintOrder: "stroke fill",
+                      fontStyle: "italic",
+                    }}
                   >
                     Flan
                   </h3>
@@ -572,10 +687,7 @@ export default function RonnyLandingPage() {
         </div>
       </section>
 
-      <section
-        id="encuentranos"
-        className="py-20 bg-gradient-to-b from-red-950/50 via-red-900/40 to-red-950/50 relative"
-      >
+      <section id="encuentranos" className="py-20 bg-red-800 relative">
         <PawPrint
           className="absolute top-10 left-10 animate-bounce"
           style={{ animationDuration: "3s", animationDelay: "0.3s" }}
@@ -606,11 +718,10 @@ export default function RonnyLandingPage() {
                     className="text-yellow-400 font-black tracking-tight"
                     style={{ fontFamily: "Impact, 'Arial Black', sans-serif" }}
                   >
-                    Las Vegas, Ecatepec
+                    26 C. Nueva York, Ecatepec de Morelos, Estado de México
                   </span>
                 </p>
               </div>
-              <p className="text-lg md:text-xl text-neutral-300">Ven a probar la diversión sobre ruedas</p>
             </div>
 
             <h3
@@ -626,7 +737,7 @@ export default function RonnyLandingPage() {
             <Card className="bg-neutral-900 border-yellow-400 border-4 overflow-hidden shadow-[0_0_30px_rgba(250,204,21,0.3)] p-0">
               <div className="w-full h-[400px] md:h-[500px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15047.234567890123!2d-99.0123456789!3d19.6123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDM2JzQ0LjQiTiA5OcKwMDAnNDQuNCJX!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.8234567890123!2d-99.05555!3d19.63333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c8c8c8c8c9%3A0x1234567890abcdef!2s26%20C.%20Nueva%20York%2C%20Ecatepec%20de%20Morelos%2C%20Estado%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1234567890123"
                   width="100%"
                   height="100%"
                   style={{ border: 0, display: "block" }}
@@ -640,7 +751,7 @@ export default function RonnyLandingPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-red-950/50 via-red-900/40 to-red-950 relative">
+      <section className="py-20 bg-red-800 relative">
         <PawPrint className="absolute top-10 left-10 animate-bounce" style={{ animationDuration: "3s" }} />
         <PawPrint
           className="absolute top-10 right-10 animate-bounce"
@@ -658,43 +769,70 @@ export default function RonnyLandingPage() {
           >
             LO QUE DICEN NUESTROS CLIENTES
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="bg-gradient-to-br from-red-600 to-red-800 border-yellow-400 border-4 rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] transition-all duration-300 hover:scale-110">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto bg-red-800 rounded-3xl p-8 md:p-12">
+            <Card className="bg-[#F5E6D3] border-yellow-400 border-4 rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] transition-all duration-300 hover:scale-110">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-neutral-100 text-lg mb-4 text-pretty">Las mejores malteadas de Ecatepec</p>
-              <p className="text-yellow-400 font-bold">— Carla M.</p>
+              <p className="text-black text-lg mb-4 text-pretty">Las mejores malteadas de Ecatepec</p>
+              <p
+                className="font-black text-lg"
+                style={{
+                  color: "#dc2626",
+                  WebkitTextStroke: "0.5px #000000",
+                  paintOrder: "stroke fill",
+                }}
+              >
+                — Carla M.
+              </p>
             </Card>
 
-            <Card className="bg-gradient-to-br from-red-600 to-red-800 border-yellow-400 border-4 rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] transition-all duration-300 hover:scale-110">
+            <Card className="bg-[#F5E6D3] border-yellow-400 border-4 rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] transition-all duration-300 hover:scale-110">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-neutral-100 text-lg mb-4 text-pretty">Ambiente increíble y servicio spectacular</p>
-              <p className="text-yellow-400 font-bold">— Luis R.</p>
+              <p className="text-black text-lg mb-4 text-pretty">Ambiente increíble y servicio spectacular</p>
+              <p
+                className="font-black text-lg"
+                style={{
+                  color: "#dc2626",
+                  WebkitTextStroke: "0.5px #000000",
+                  paintOrder: "stroke fill",
+                }}
+              >
+                — Luis R.
+              </p>
             </Card>
 
-            <Card className="bg-gradient-to-br from-red-600 to-red-800 border-yellow-400 border-4 rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] transition-all duration-300 hover:scale-110">
+            <Card className="bg-[#F5E6D3] border-yellow-400 border-4 rounded-3xl p-6 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] transition-all duration-300 hover:scale-110">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-neutral-100 text-lg mb-4 text-pretty">
+              <p className="text-black text-lg mb-4 text-pretty">
                 Las crepas son un sueño, y el logo del perrito es lo más lindo
               </p>
-              <p className="text-yellow-400 font-bold">— Sofía G.</p>
+              <p
+                className="font-black text-lg"
+                style={{
+                  color: "#dc2626",
+                  WebkitTextStroke: "0.5px #000000",
+                  paintOrder: "stroke fill",
+                }}
+              >
+                — Sofía G.
+              </p>
             </Card>
           </div>
         </div>
       </section>
 
-      <section id="contacto" className="py-20 bg-gradient-to-b from-red-950/50 via-red-900/40 to-red-950 relative">
+      <section id="contacto" className="py-20 bg-red-800 relative">
         <PawPrint
           className="absolute top-10 left-10 animate-bounce"
           style={{ animationDuration: "3s", animationDelay: "0.2s" }}
@@ -742,7 +880,7 @@ export default function RonnyLandingPage() {
                 </a>
 
                 <a
-                  href="https://instagram.com/ronnyfoodtruck"
+                  href="https://www.instagram.com/ronnystruck04/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 rounded-full flex items-center justify-center transition-transform hover:scale-110 flex-shrink-0"
@@ -771,7 +909,7 @@ export default function RonnyLandingPage() {
                 </a>
 
                 <a
-                  href="https://facebook.com/ronnyfoodtruck"
+                  href="https://www.facebook.com/profile.php?id=61578442170631"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 rounded-full flex items-center justify-center transition-transform hover:scale-110 flex-shrink-0"

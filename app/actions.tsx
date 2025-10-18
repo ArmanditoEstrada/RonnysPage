@@ -3,7 +3,7 @@
 import { Resend } from "resend"
 
 // Initialize Resend with your API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 interface ContactFormData {
   name: string
@@ -18,6 +18,13 @@ export async function sendContactEmail(data: ContactFormData) {
       return {
         success: false,
         message: "Por favor completa todos los campos requeridos.",
+      }
+    }
+
+    if (!resend) {
+      return {
+        success: false,
+        message: "El servicio de email no está configurado. Por favor contacta al administrador.",
       }
     }
 

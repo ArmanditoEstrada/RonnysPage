@@ -65,7 +65,7 @@ The menu features a wide variety of desserts and snacks:
 
 ## 📦 Installation
 
-```bash
+\`\`\`bash
 # Install dependencies
 npm install
 
@@ -77,7 +77,7 @@ npm run build
 
 # Start production server
 npm start
-```
+\`\`\`
 
 ## 📧 Email Configuration (Resend)
 
@@ -105,9 +105,9 @@ Add the environment variable:
 
 Edit the `app/actions.tsx` file and change:
 
-```typescript
+\`\`\`typescript
 to: ["your-email@example.com"], // Change this to your real email
-```
+\`\`\`
 
 ### 5. Verify Domain (Optional - For Production)
 
@@ -118,9 +118,9 @@ To use a custom domain in production:
 3. Configure DNS records according to the instructions
 4. Update the `from` field in `app/actions.tsx`:
 
-```typescript
+\`\`\`typescript
 from: "Ronny's Food Truck <contact@yourdomain.com>",
-```
+\`\`\`
 
 **Note**: In development, you can use `onboarding@resend.dev` as the sender.
 
