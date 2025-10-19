@@ -5,7 +5,6 @@ import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Star, MapPin, Menu, X } from "lucide-react"
 import Image from "next/image"
-import { sendContactEmail } from "./actions"
 
 const PawPrint = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 50 50" fill="currentColor" className={`w-12 h-12 text-yellow-400/60 ${className}`}>
@@ -18,39 +17,12 @@ const PawPrint = ({ className = "" }: { className?: string }) => (
 )
 
 export default function RonnyLandingPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<{ type: "success" | "error"; message: string } | null>(null)
   const [heroLoaded, setHeroLoaded] = useState(false)
 
   useEffect(() => {
     setHeroLoaded(true)
   }, [])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus(null)
-
-    try {
-      const result = await sendContactEmail(formData)
-
-      if (result.success) {
-        setSubmitStatus({ type: "success", message: result.message })
-        setFormData({ name: "", email: "", message: "" })
-      } else {
-        setSubmitStatus({ type: "error", message: result.message })
-      }
-    } catch (error) {
-      setSubmitStatus({
-        type: "error",
-        message: "Hubo un error al enviar tu mensaje. Por favor intenta de nuevo.",
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -84,7 +56,7 @@ export default function RonnyLandingPage() {
           <nav className="hidden md:flex gap-6">
             <a
               href="#inicio"
-              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight"
+              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight text-lg"
               style={{
                 fontFamily: "Impact, 'Arial Black', sans-serif",
                 WebkitTextStroke: "1.5px #dc2626",
@@ -95,7 +67,7 @@ export default function RonnyLandingPage() {
             </a>
             <a
               href="#historia"
-              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight"
+              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight text-lg"
               style={{
                 fontFamily: "Impact, 'Arial Black', sans-serif",
                 WebkitTextStroke: "1.5px #dc2626",
@@ -106,7 +78,7 @@ export default function RonnyLandingPage() {
             </a>
             <a
               href="#menu"
-              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight"
+              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight text-lg"
               style={{
                 fontFamily: "Impact, 'Arial Black', sans-serif",
                 WebkitTextStroke: "1.5px #dc2626",
@@ -117,7 +89,7 @@ export default function RonnyLandingPage() {
             </a>
             <a
               href="#encuentranos"
-              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight"
+              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight text-lg"
               style={{
                 fontFamily: "Impact, 'Arial Black', sans-serif",
                 WebkitTextStroke: "1.5px #dc2626",
@@ -128,7 +100,7 @@ export default function RonnyLandingPage() {
             </a>
             <a
               href="#contacto"
-              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight"
+              className="text-yellow-400 hover:text-yellow-300 font-black transition-all tracking-tight text-lg"
               style={{
                 fontFamily: "Impact, 'Arial Black', sans-serif",
                 WebkitTextStroke: "1.5px #dc2626",
@@ -231,8 +203,8 @@ export default function RonnyLandingPage() {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* Hero content - moved up and adjusted positioning */}
-        <div className="relative z-10 container mx-auto px-4 text-left pt-32">
+        {/* Hero content - moved up with larger logo */}
+        <div className="relative z-10 container mx-auto px-4 text-left pt-12">
           <div className="max-w-2xl">
             {/* Welcome text with fade-in animation */}
             <p
@@ -248,7 +220,7 @@ export default function RonnyLandingPage() {
               Bienvenido a
             </p>
 
-            {/* Main title - RONNY'S logo unchanged with transition */}
+            {/* Main title - RONNY'S logo unchanged with transition - LARGER */}
             <div
               className="mb-6 transition-all duration-1000"
               style={{
@@ -260,8 +232,8 @@ export default function RonnyLandingPage() {
               <Image
                 src="/ronnys-logo-design.png"
                 alt="Ronny's Logo"
-                width={300}
-                height={100}
+                width={450}
+                height={150}
                 className="drop-shadow-[0_0_20px_rgba(239,68,68,0.8)]"
                 style={{ background: "transparent" }}
               />
@@ -394,10 +366,10 @@ export default function RonnyLandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto mb-12">
             <div className="bg-[#f5f0e8] rounded-3xl overflow-hidden border-4 border-black shadow-2xl">
-              {/* Checkered border top */}
+              {/* Checkered border top - BLACK */}
               <div className="h-8 flex">
                 {[...Array(40)].map((_, i) => (
-                  <div key={i} className={`flex-1 ${i % 2 === 0 ? "bg-red-600" : "bg-white"}`} />
+                  <div key={i} className={`flex-1 ${i % 2 === 0 ? "bg-black" : "bg-white"}`} />
                 ))}
               </div>
 
@@ -411,10 +383,10 @@ export default function RonnyLandingPage() {
                 </h2>
               </div>
 
-              {/* Checkered border bottom */}
+              {/* Checkered border bottom - BLACK */}
               <div className="h-8 flex">
                 {[...Array(40)].map((_, i) => (
-                  <div key={i} className={`flex-1 ${i % 2 === 0 ? "bg-red-600" : "bg-white"}`} />
+                  <div key={i} className={`flex-1 ${i % 2 === 0 ? "bg-black" : "bg-white"}`} />
                 ))}
               </div>
             </div>
@@ -433,7 +405,7 @@ export default function RonnyLandingPage() {
             </p>
           </div>
 
-          <div className="max-w-7xl mx-auto space-y-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden">
               {/* Checkered pattern background */}
               <div
@@ -445,13 +417,13 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img src="/crepas.png" alt="Crepas" className="w-full h-full object-cover rounded-lg shadow-md" />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -485,17 +457,17 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img
                     src="/belgian-waffle-with-berries-and-syrup.jpg"
                     alt="Waffles"
                     className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -527,17 +499,17 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img
                     src="/stack-of-pancakes-with-butter-and-syrup.jpg"
                     alt="Hotcakes"
                     className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -568,17 +540,17 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img
                     src="/loaded-fries.png"
                     alt="Snacks"
                     className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -610,17 +582,17 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img
                     src="/malteada.png"
                     alt="Bebidas"
                     className="w-full h-full object-cover rounded-lg shadow-md object-top"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -649,17 +621,17 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img
                     src="/strawberries-with-cream-dessert.jpg"
                     alt="Con crema"
                     className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -688,17 +660,17 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-full md:w-48 h-48 flex-shrink-0">
+              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
+                <div className="w-full h-48 flex-shrink-0">
                   <img
                     src="/flan-napolitano-dessert.jpg"
                     alt="Flan"
                     className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3
-                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight text-center"
+                    className="text-4xl md:text-5xl font-black text-red-600 mb-4 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
                       WebkitTextStroke: "2px #000000",
@@ -901,6 +873,19 @@ export default function RonnyLandingPage() {
                   <MapPin className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
                   <p className="text-lg">26 C. Nueva York, Ecatepec de Morelos, Estado de México</p>
                 </div>
+                <div className="flex items-start gap-3 justify-center">
+                  <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <p className="text-lg">roonysfoodtruck04@gmail.com</p>
+                </div>
+                <div className="flex items-start gap-3 justify-center">
+                  <svg className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                  <p className="text-lg">5652346248</p>
+                </div>
               </div>
             </Card>
 
@@ -917,10 +902,10 @@ export default function RonnyLandingPage() {
                 Horarios
               </h3>
               <div className="space-y-3 text-neutral-100 text-lg">
-                <p>Lunes a Viernes</p>
-                <p className="font-bold">10:00 am - 8:00 pm</p>
-                <p className="mt-4">Sábado y Domingo</p>
-                <p className="font-bold">10:00 am - 10:00 pm</p>
+                <p>Lunes a Jueves</p>
+                <p className="font-bold text-red-400">OFF</p>
+                <p className="mt-4">Viernes a Domingo</p>
+                <p className="font-bold">6:00 pm - 11:00 pm</p>
               </div>
             </Card>
 
@@ -967,7 +952,33 @@ export default function RonnyLandingPage() {
                 </a>
 
                 <a
-                  href="https://wa.me/525512345678"
+                  href="https://www.tiktok.com/@ronnystruck04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style={{ backgroundColor: "#000000" }}
+                  aria-label="TikTok"
+                >
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.82 2.89 2.89 0 0 1 2.31-4.64 2.86 2.86 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.54-.05z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://x.com/ronnystruck04"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style={{ backgroundColor: "#000000" }}
+                  aria-label="X"
+                >
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.829 6.694h-3.328l7.691-8.793-8.162-10.708h6.51l4.759 6.289 5.331-6.289zM16.17 18.933h1.829L5.25 3.75H3.306l12.864 15.183z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://wa.me/5652346248"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110"
