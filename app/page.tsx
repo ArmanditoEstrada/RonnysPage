@@ -231,7 +231,7 @@ export default function RonnyLandingPage() {
         id="inicio"
         className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
         style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-EPTjeYQLTEStsr4Q0KUkK0w4hEUn8W.png')`,
+          backgroundImage: `url('/images/image.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "scroll",
@@ -322,80 +322,16 @@ export default function RonnyLandingPage() {
         </div>
       </section>
 
-      <section id="historia" className="py-20 bg-red-700 relative">
-        <PawPrint className="absolute top-10 left-10 animate-bounce" style={{ animationDuration: "3s" }} />
-        <PawPrint
-          className="absolute top-10 right-10 animate-bounce"
-          style={{ animationDuration: "3.3s", animationDelay: "0.4s" }}
+      <section id="menu" className="py-20 bg-red-700 relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: `url('/stack-of-pancakes-with-butter-and-syrup.jpg')`,
+            backgroundSize: "400px 400px",
+            backgroundRepeat: "repeat",
+          }}
         />
 
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2
-              id="historia-title"
-              data-animate-title
-              className="text-4xl md:text-5xl font-black text-yellow-400 mb-12 text-center tracking-tighter transition-all duration-1000"
-              style={{
-                fontFamily: "Impact, 'Arial Black', sans-serif",
-                WebkitTextStroke: "2px #dc2626",
-                paintOrder: "stroke fill",
-                opacity: visibleSections["historia-title"] ? 1 : 0,
-                transform: visibleSections["historia-title"] ? "translateY(0)" : "translateY(30px)",
-              }}
-            >
-              🍽️ TODO EMPEZÓ 🍽️
-            </h2>
-            <div className="space-y-6">
-              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
-                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
-                  👧 Desde pequeña, siempre me fascinó el mundo de la cocina. Pasaba horas jugando con mis juegos de
-                  comidita, imaginando sabores, colores y combinaciones que algún día podría crear de verdad. Lo que
-                  empezó como un simple pasatiempo infantil se transformó con el tiempo en una auténtica pasión por
-                  cocinar y compartir momentos a través de la comida.
-                </p>
-              </Card>
-
-              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
-                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
-                  🚚 Esa pasión fue el punto de partida de Ronny's, nuestro food truck sobre ruedas, un sueño hecho
-                  realidad gracias al apoyo incondicional de mis padres, Christopher Jiménez y Marlene Espinosa. Ellos
-                  creyeron en mí desde el primer momento, y juntos tomamos la valiente decisión de dejarlo todo para
-                  construir este proyecto familiar.
-                </p>
-              </Card>
-
-              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
-                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
-                  ❤️ Hoy, Ronny's no solo representa mi amor por la cocina, sino también el esfuerzo, la unión y la
-                  dedicación de nuestra familia. Cada platillo que servimos lleva un pedacito de esa historia: la de una
-                  niña que soñaba con cocinar y una familia que apostó por convertir ese sueño en sabor sobre ruedas.
-                </p>
-              </Card>
-
-              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
-                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
-                  🐕 El nombre viene de Ronny, nuestro pequeño chihuahua — la mascota de la familia y ahora la cara de
-                  este dulce sueño sobre ruedas.
-                </p>
-              </Card>
-
-              <div className="flex justify-center my-8">
-                <div className="w-full md:w-96 h-96 rounded-3xl overflow-hidden border-4 border-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.3)]">
-                  <Image
-                    src="/chihuahua-ronny.png"
-                    alt="Ronny el chihuahua"
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="menu" className="py-20 bg-red-700 relative">
         <PawPrint
           className="absolute top-10 left-10 animate-bounce"
           style={{ animationDuration: "3s", animationDelay: "0.2s" }}
@@ -405,7 +341,7 @@ export default function RonnyLandingPage() {
           style={{ animationDuration: "3.5s", animationDelay: "0.7s" }}
         />
 
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto mb-12">
             <div className="bg-[#f5f0e8] rounded-3xl overflow-hidden border-4 border-black shadow-2xl">
               {/* Checkered border top - BLACK */}
@@ -415,7 +351,7 @@ export default function RonnyLandingPage() {
                 ))}
               </div>
 
-              {/* Menu header - only showing Menú label */}
+              {/* Menu header */}
               <div className="px-8 py-6 flex items-center justify-center">
                 <h2
                   id="menu-title"
@@ -453,9 +389,35 @@ export default function RonnyLandingPage() {
             </p>
           </div>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
-              {/* Checkered pattern background */}
+          <div className="max-w-7xl mx-auto mb-12">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+              {[
+                { name: "Crepas", id: "crepas" },
+                { name: "Waffles", id: "waffles" },
+                { name: "Hotcakes", id: "hotcakes" },
+                { name: "Snacks", id: "snacks" },
+                { name: "Bebidas", id: "bebidas" },
+                { name: "Con crema", id: "concrema" },
+              ].map((cat) => (
+                <button
+                  key={cat.id}
+                  className={`px-4 md:px-6 py-2 rounded-full font-bold text-sm md:text-base transition-all duration-300 ${
+                    true
+                      ? "bg-red-600 text-yellow-400 border-2 border-yellow-400"
+                      : "bg-neutral-800 text-neutral-300 border-2 border-neutral-700 hover:border-yellow-400"
+                  }`}
+                  style={{
+                    fontFamily: "Impact, 'Arial Black', sans-serif",
+                  }}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -465,12 +427,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/crepas.png"
                     alt="Crepas"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite",
                     }}
@@ -478,31 +440,26 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
                     Crepas
                   </h3>
-                  <div className="space-y-2">
-                    <div>
-                      <p className="text-red-600 font-bold text-lg mb-1 leading-relaxed">Sencillos - $45</p>
-                      <p className="text-black text-sm leading-relaxed">
-                        Nutella • Cajeta • Zarzamora con queso • Fresa con queso
-                      </p>
-                    </div>
-                    <p className="text-red-600 font-bold text-lg leading-relaxed">Con fruta - $55</p>
-                    <p className="text-red-600 font-bold text-lg leading-relaxed">Con fruta y helado - $65</p>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <p className="text-red-600 font-bold">Sencillos - $45</p>
+                    <p className="text-red-600 font-bold">Con fruta - $55</p>
+                    <p className="text-red-600 font-bold">Con fruta y helado - $65</p>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -512,12 +469,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/belgian-waffle-with-berries-and-syrup.jpg"
                     alt="Waffles"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite 0.5s",
                     }}
@@ -525,29 +482,26 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
                     Waffles
                   </h3>
-                  <div className="space-y-2">
-                    <div>
-                      <p className="text-red-600 font-bold text-lg mb-1 leading-relaxed">Sencillos - $55</p>
-                      <p className="text-black text-sm leading-relaxed">Cajeta • Nutella • Fresa • Maple • Lechera</p>
-                    </div>
-                    <p className="text-red-600 font-bold text-lg leading-relaxed">Con fruta - $65</p>
-                    <p className="text-red-600 font-bold text-lg leading-relaxed">Con fruta y helado - $75</p>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <p className="text-red-600 font-bold">Sencillos - $55</p>
+                    <p className="text-red-600 font-bold">Con fruta - $65</p>
+                    <p className="text-red-600 font-bold">Con fruta y helado - $75</p>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -557,12 +511,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/stack-of-pancakes-with-butter-and-syrup.jpg"
                     alt="Hotcakes"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite 1s",
                     }}
@@ -570,28 +524,25 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
                     Hotcakes
                   </h3>
-                  <div className="space-y-2">
-                    <div>
-                      <p className="text-red-600 font-bold text-lg mb-1 leading-relaxed">Sencillos - $50</p>
-                      <p className="text-black text-sm leading-relaxed">Nutella • Fresa • Cajeta • Maple • Lechera</p>
-                    </div>
-                    <p className="text-red-600 font-bold text-lg leading-relaxed">Con fruta - $60</p>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <p className="text-red-600 font-bold">Sencillos - $50</p>
+                    <p className="text-red-600 font-bold">Con fruta - $60</p>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -601,12 +552,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/loaded-fries.png"
                     alt="Snacks"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite 1.5s",
                     }}
@@ -614,29 +565,27 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
                     Snacks
                   </h3>
-                  <div className="space-y-1 text-black leading-relaxed">
+                  <div className="space-y-1 text-xs md:text-sm">
                     <p>Salchipapas ............... $55</p>
                     <p>Papas a la francesa ............... $40</p>
                     <p>Salchipulpos ............... $55</p>
                     <p>Maruchan ............... $30</p>
-                    <p>Nachos ............... $45</p>
-                    <p>Papas locas ............... $25</p>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -646,12 +595,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/malteada.png"
                     alt="Bebidas"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110 object-top"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 object-top"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite 2s",
                     }}
@@ -659,26 +608,26 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
                     Bebidas
                   </h3>
-                  <div className="space-y-1 text-black leading-relaxed">
+                  <div className="space-y-1 text-xs md:text-sm">
                     <p>Capuchino ............... $35</p>
                     <p>Americano ............... $22</p>
-                    <p>Malteada fresa, vainilla, chocolate y galleta ............... $55</p>
+                    <p>Malteada ............... $55</p>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -688,12 +637,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/strawberries-with-cream-dessert.jpg"
                     alt="Con crema"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite 2.5s",
                     }}
@@ -701,17 +650,17 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
                     Con crema
                   </h3>
-                  <div className="space-y-1 text-black leading-relaxed">
+                  <div className="space-y-1 text-xs md:text-sm">
                     <p>Fresas con crema ............... $60</p>
                     <p>Plátanos con crema ............... $50</p>
                     <p>Duraznos con crema ............... $50</p>
@@ -720,7 +669,7 @@ export default function RonnyLandingPage() {
               </div>
             </Card>
 
-            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 md:p-8 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
+            <Card className="bg-[#F5E6D3] border-4 border-dashed border-red-600 p-6 shadow-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative overflow-hidden group">
               <div
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
@@ -730,12 +679,12 @@ export default function RonnyLandingPage() {
                   backgroundPosition: "0 0, 10px 10px",
                 }}
               />
-              <div className="relative z-10 flex flex-col gap-6 items-center text-center">
-                <div className="w-full h-40 md:h-48 flex-shrink-0 overflow-hidden rounded-lg">
+              <div className="relative z-10 flex flex-col gap-4 items-center text-center">
+                <div className="w-full h-32 flex-shrink-0 overflow-hidden rounded-lg">
                   <img
                     src="/flan.jpg"
-                    alt="Flan"
-                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50 group-hover:scale-110"
+                    alt="Flanes"
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700 group-hover:opacity-50"
                     style={{
                       animation: "fadeInOut 3s ease-in-out infinite 3s",
                     }}
@@ -743,17 +692,20 @@ export default function RonnyLandingPage() {
                 </div>
                 <div className="flex-1 w-full">
                   <h3
-                    className="text-3xl md:text-4xl font-black text-red-600 mb-4 tracking-tight"
+                    className="text-2xl md:text-3xl font-black text-red-600 mb-2 tracking-tight"
                     style={{
                       fontFamily: "Impact, 'Arial Black', sans-serif",
-                      WebkitTextStroke: "2px #000000",
+                      WebkitTextStroke: "1px #000000",
                       paintOrder: "stroke fill",
                       fontStyle: "italic",
                     }}
                   >
-                    Flan
+                    Flanes
                   </h3>
-                  <p className="text-black leading-relaxed">Flan napolitano ............... $42</p>
+                  <div className="space-y-1 text-xs md:text-sm">
+                    <p>Flan casero ............... $35</p>
+                    <p>Flan con fruta ............... $45</p>
+                  </div>
                 </div>
               </div>
             </Card>
@@ -829,11 +781,84 @@ export default function RonnyLandingPage() {
         </div>
       </section>
 
+      <section id="historia" className="py-20 bg-red-700 relative">
+        <PawPrint className="absolute top-10 left-10 animate-bounce" style={{ animationDuration: "3s" }} />
+        <PawPrint
+          className="absolute top-10 right-10 animate-bounce"
+          style={{ animationDuration: "3.3s", animationDelay: "0.4s" }}
+        />
+
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2
+              id="historia-title"
+              data-animate-title
+              className="text-4xl md:text-5xl font-black text-yellow-400 mb-12 text-center tracking-tighter transition-all duration-1000"
+              style={{
+                fontFamily: "Impact, 'Arial Black', sans-serif",
+                WebkitTextStroke: "2px #dc2626",
+                paintOrder: "stroke fill",
+                opacity: visibleSections["historia-title"] ? 1 : 0,
+                transform: visibleSections["historia-title"] ? "translateY(0)" : "translateY(30px)",
+              }}
+            >
+              🍽️ TODO EMPEZÓ 🍽️
+            </h2>
+            <div className="space-y-6">
+              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
+                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
+                  👧 Desde pequeña, siempre me fascinó el mundo de la cocina. Pasaba horas jugando con mis juegos de
+                  comidita, imaginando sabores, colores y combinaciones que algún día podría crear de verdad. Lo que
+                  empezó como un simple pasatiempo infantil se transformó con el tiempo en una auténtica pasión por
+                  cocinar y compartir momentos a través de la comida.
+                </p>
+              </Card>
+
+              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
+                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
+                  🚚 Esa pasión fue el punto de partida de Ronny's, nuestro food truck sobre ruedas, un sueño hecho
+                  realidad gracias al apoyo incondicional de mis padres, Christopher Jiménez y Marlene Espinosa. Ellos
+                  creyeron en mí desde el primer momento, y juntos tomamos la valiente decisión de dejarlo todo para
+                  construir este proyecto familiar.
+                </p>
+              </Card>
+
+              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
+                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
+                  ❤️ Hoy, Ronny's no solo representa mi amor por la cocina, sino también el esfuerzo, la unión y la
+                  dedicación de nuestra familia. Cada platillo que servimos lleva un pedacito de esa historia: la de una
+                  niña que soñaba con cocinar y una familia que apostó por convertir ese sueño en sabor sobre ruedas.
+                </p>
+              </Card>
+
+              <Card className="bg-[#2a2d39]/80 border-yellow-400 border-2 rounded-3xl p-8 md:p-10 shadow-[0_0_30px_rgba(250,204,21,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(250,204,21,0.4)] hover:scale-[1.02]">
+                <p className="text-lg md:text-xl text-neutral-100 leading-relaxed text-pretty">
+                  🐕 El nombre viene de Ronny, nuestro pequeño chihuahua — la mascota de la familia y ahora la cara de
+                  este dulce sueño sobre ruedas.
+                </p>
+              </Card>
+
+              <div className="flex justify-center my-8">
+                <div className="w-full md:w-96 h-96 rounded-3xl overflow-hidden border-4 border-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.3)]">
+                  <Image
+                    src="/chihuahua-ronny.png"
+                    alt="Ronny el chihuahua"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-red-700 relative">
         <PawPrint className="absolute top-10 left-10 animate-bounce" style={{ animationDuration: "3s" }} />
         <PawPrint
           className="absolute top-10 right-10 animate-bounce"
-          style={{ animationDuration: "3.4s", animationDelay: "0.6s" }}
+          style={{ animationDuration: "3.3s", animationDelay: "0.4s" }}
         />
 
         <div className="container mx-auto px-4">
@@ -950,7 +975,7 @@ export default function RonnyLandingPage() {
         </div>
       </section>
 
-      <section id="contacto" className="py-20 bg-red-700 relative">
+      <section id="promociones" className="py-20 bg-red-700 relative">
         <PawPrint
           className="absolute top-10 left-10 animate-bounce"
           style={{ animationDuration: "3s", animationDelay: "0.2s" }}
@@ -962,182 +987,185 @@ export default function RonnyLandingPage() {
 
         <div className="container mx-auto px-4">
           <h2
-            id="contacto-title"
+            id="promociones-title"
             data-animate-title
             className="text-4xl md:text-6xl font-black text-yellow-400 mb-16 text-center tracking-tighter transition-all duration-1000"
             style={{
               fontFamily: "Impact, 'Arial Black', sans-serif",
               WebkitTextStroke: "2px #dc2626",
               paintOrder: "stroke fill",
-              opacity: visibleSections["contacto-title"] ? 1 : 0,
-              transform: visibleSections["contacto-title"] ? "translateY(0)" : "translateY(30px)",
+              opacity: visibleSections["promociones-title"] ? 1 : 0,
+              transform: visibleSections["promociones-title"] ? "translateY(0)" : "translateY(30px)",
             }}
           >
-            CONTÁCTANOS
+            PROMOCIONES
           </h2>
 
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left side - Responsive Video */}
-            <div className="flex justify-center">
-              <div className="w-full max-w-sm border-4 border-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.3)] rounded-3xl overflow-hidden">
-                <ResponsiveIframe src="https://streamable.com/e/oxs4hl" />
+          <div className="max-w-6xl mx-auto flex justify-center">
+            {/* CHANGE: Removed grid layout, now only video centered */}
+            <div className="w-full max-w-md border-4 border-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.3)] rounded-3xl overflow-hidden">
+              <div style={{ aspectRatio: "9/16" }}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/HKpJcQ4-KEc?autoplay=1&mute=1&loop=1&playlist=HKpJcQ4-KEc"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{ display: "block", borderRadius: "1.5rem" }}
+                ></iframe>
               </div>
-            </div>
-
-            {/* Right side - Contact Info */}
-            <div className="space-y-6">
-              {/* Ubicación */}
-              <Card className="bg-neutral-900 border-2 border-yellow-400 rounded-2xl p-6">
-                <h3
-                  className="text-2xl font-black text-yellow-400 mb-4 tracking-tight"
-                  style={{
-                    fontFamily: "Impact, 'Arial Black', sans-serif",
-                    WebkitTextStroke: "1.5px #dc2626",
-                    paintOrder: "stroke fill",
-                  }}
-                >
-                  Ubicación
-                </h3>
-                <div className="space-y-3 text-neutral-100">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" />
-                    <p className="text-sm break-words">26 C. Nueva York, Ecatepec de Morelos, Estado de México</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-sm break-all">roonysfoodtruck04@gmail.com</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                    </svg>
-                    <p className="text-sm">5652346248</p>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Horarios */}
-              <Card className="bg-neutral-900 border-2 border-yellow-400 rounded-2xl p-6">
-                <h3
-                  className="text-2xl font-black text-yellow-400 mb-4 tracking-tight"
-                  style={{
-                    fontFamily: "Impact, 'Arial Black', sans-serif",
-                    WebkitTextStroke: "1.5px #dc2626",
-                    paintOrder: "stroke fill",
-                  }}
-                >
-                  Horarios
-                </h3>
-                <div className="space-y-2 text-neutral-100 text-sm">
-                  <p>
-                    Lunes a Jueves: <span className="font-bold text-red-400">OFF</span>
-                  </p>
-                  <p>
-                    Viernes a Domingo: <span className="font-bold">6:00 pm - 11:00 pm</span>
-                  </p>
-                </div>
-              </Card>
-
-              {/* Síguenos */}
-              <Card className="bg-neutral-900 border-2 border-yellow-400 rounded-2xl p-6">
-                <h3
-                  className="text-2xl font-black text-yellow-400 mb-4 tracking-tight"
-                  style={{
-                    fontFamily: "Impact, 'Arial Black', sans-serif",
-                    WebkitTextStroke: "1.5px #dc2626",
-                    paintOrder: "stroke fill",
-                  }}
-                >
-                  Síguenos
-                </h3>
-                <div className="space-y-2">
-                  <a
-                    href="https://www.instagram.com/ronnystruck04/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-neutral-100 hover:text-yellow-400 transition-all duration-300 hover:scale-110 text-sm"
-                  >
-                    <svg className="w-6 h-6 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
-                    </svg>
-                    <span>Instagram</span>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61578442170631"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-neutral-100 hover:text-yellow-400 transition-all duration-300 hover:scale-110 text-sm"
-                  >
-                    <svg className="w-6 h-6 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                    </svg>
-                    <span>Facebook</span>
-                  </a>
-                  <a
-                    href="https://www.tiktok.com/@ronnystruck04"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-neutral-100 hover:text-yellow-400 transition-all duration-300 hover:scale-110 text-sm"
-                  >
-                    <svg className="w-6 h-6 text-black flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.82 2.89 2.89 0 0 1 2.31-4.64 2.86 2.86 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.54-.05z" />
-                    </svg>
-                    <span>TikTok</span>
-                  </a>
-                  <a
-                    href="https://x.com/ronnystruck04"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-neutral-100 hover:text-yellow-400 transition-all duration-300 hover:scale-110 text-sm"
-                  >
-                    <svg className="w-6 h-6 text-black flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.829 6.694h-3.328l7.691-8.793-8.162-10.708h6.51l4.759 6.289 5.331-6.289zM16.17 18.933h1.829L5.25 3.75H3.306l12.864 15.183z" />
-                    </svg>
-                    <span>X</span>
-                  </a>
-                  <a
-                    href="https://wa.me/5652346248"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-neutral-100 hover:text-yellow-400 transition-all duration-300 hover:scale-110 text-sm"
-                  >
-                    <svg className="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                    </svg>
-                    <span>WhatsApp</span>
-                  </a>
-                </div>
-              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-red-950 py-8 border-t-2 border-yellow-400">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center gap-4">
-              <Image
-                src="/ronny-logo.png"
-                alt="Ronny Chihuahua Logo"
-                width={70}
-                height={70}
-                className="drop-shadow-[0_0_20px_rgba(255,215,0,0.7)]"
-              />
-              <Image
-                src="/ronnys-logo-design.png"
-                alt="Ronny's Logo"
-                width={180}
-                height={60}
-                className="drop-shadow-[0_0_20px_rgba(239,68,68,0.7)]"
-                style={{ background: "transparent" }}
-              />
+      {/* CHANGE: Removed CONTÁCTANOS section */}
+
+      <footer className="bg-neutral-900 border-t-4 border-red-600">
+        {/* Top section with logo and social media */}
+        <div className="bg-neutral-900 py-8 px-4 md:px-8">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {/* Left - Logo and branding */}
+              <div className="flex flex-col items-center md:items-start gap-3">
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/ronny-logo.png"
+                    alt="Ronny Chihuahua Logo"
+                    width={50}
+                    height={50}
+                    className="drop-shadow-[0_0_20px_rgba(255,215,0,0.7)]"
+                  />
+                  <Image
+                    src="/ronnys-logo-design.png"
+                    alt="Ronny's Logo"
+                    width={120}
+                    height={40}
+                    className="drop-shadow-[0_0_20px_rgba(239,68,68,0.7)]"
+                  />
+                </div>
+                <p className="text-yellow-400 text-sm md:text-center">🐕 Dulzura sobre ruedas</p>
+              </div>
+
+              {/* Center - Quick Links */}
+              <div className="flex flex-col items-center gap-4">
+                <h4 className="text-yellow-400 font-bold tracking-tight">Menú</h4>
+                <ul className="flex flex-col gap-2 text-neutral-300 text-sm text-center">
+                  <li>
+                    <a href="#inicio" className="hover:text-yellow-400 transition-colors">
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#historia" className="hover:text-yellow-400 transition-colors">
+                      Historia
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#menu" className="hover:text-yellow-400 transition-colors">
+                      Menú
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#encuentranos" className="hover:text-yellow-400 transition-colors">
+                      Encuéntranos
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right - Horarios and Contacto */}
+              <div className="flex flex-col md:flex-col gap-6">
+                <div className="text-center md:text-right">
+                  <h4 className="text-yellow-400 font-bold tracking-tight mb-2">Horarios</h4>
+                  <p className="text-neutral-300 text-sm">L-J: OFF</p>
+                  <p className="text-neutral-300 text-sm">V-D: 6:00 PM - 11:00 PM</p>
+                </div>
+                <div className="text-center md:text-right">
+                  <h4 className="text-yellow-400 font-bold tracking-tight mb-2">Contacto</h4>
+                  <p className="text-neutral-300 text-sm">📧 roonysfoodtruck04@gmail.com</p>
+                  <p className="text-neutral-300 text-sm">📞 5652346248</p>
+                </div>
+              </div>
             </div>
-            <p className="text-neutral-400 text-center">© 2025 Ronny Food Truck. Todos los derechos reservados.</p>
-            <p className="text-yellow-400 text-sm">🐕 Dulzura sobre ruedas</p>
+
+            <div className="border-t border-neutral-700 pt-6 flex justify-center gap-4 md:gap-6 flex-wrap">
+              <a
+                href="https://www.instagram.com/ronnystruck04/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110"
+              >
+                {/* CHANGE: Fixed Instagram logo with proper SVG viewBox and styling */}
+                <div className="w-10 h-10 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61578442170631"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110"
+              >
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">Facebook</span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@ronnystruck04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110"
+              >
+                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.82 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.07 6.81 6.81 0 1 0 6.82 6.87v-3.19a4.82 4.82 0 0 0 3.83 1.76v-3.45a4.81 4.81 0 0 1-3.66-1.84z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">TikTok</span>
+              </a>
+              <a
+                href="https://x.com/ronnystruck04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110"
+              >
+                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">X</span>
+              </a>
+              <a
+                href="https://wa.me/5652346248"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:scale-110"
+              >
+                {/* CHANGE: Fixed WhatsApp logo with proper sizing and padding */}
+                <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.77c0 2.716.738 5.355 2.122 7.683l-2.262 6.795 6.975-2.23c2.25 1.231 4.784 1.884 7.316 1.884 5.341 0 9.852-4.487 9.797-10.011a9.844 9.844 0 00-2.928-6.93 9.87 9.87 0 00-7.21-2.881m0 0" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">WhatsApp</span>
+              </a>
+            </div>
           </div>
+        </div>
+
+        {/* Bottom copyright bar */}
+        <div className="bg-red-600 py-4 text-center border-t border-neutral-700">
+          <p className="text-white text-sm font-medium">© 2025 Ronny's Food Truck. Todos los derechos reservados.</p>
         </div>
       </footer>
 
